@@ -32,18 +32,10 @@
                 return response.json();
             })
             .then(function (response) {
-                var duLieuNgayThang = [];
-                var duLieuSoCaNhiem = []
-                var duLieuSoCaKhoi = []
-                var duLieuSoCaTuVong = []
+                
                 var data = response.locations;
                 const { cases, death, recovered } = response.today.internal;
-                for (let i = 0; i < 7; i++) {
-                    duLieuNgayThang.push(response.overview[i].date);
-                    duLieuSoCaNhiem.push(response.overview[i].recovered);
-                    duLieuSoCaKhoi.push(response.overview[i].cases);
-                    duLieuSoCaTuVong.push(response.overview[i].death);
-                }
+                
                 var searchByName = data.filter(v => v.name === 'Bình Dương'
                     || v.name === 'TP. Hồ Chí Minh'
                     || v.name === 'Đắk Lắk'
@@ -98,9 +90,7 @@
                 $('#tongsocathegioi').text(response.total.world.cases.toLocaleString());
                 $('#tongsocahoiphucthegioi').text(response.total.world.recovered.toLocaleString());
 
-                $('#nhiemtrungbinh7ngay').text('Trung bình 7 ngày : ' + response.overview[0].avgCases7day.toLocaleString());
-                $('#khoitrungbinh7ngay').text('Trung bình 7 ngày : ' + response.overview[0].avgRecovered7day.toLocaleString());
-                $('#tuvongtrungbinh7ngay').text('Trung bình 7 ngày : ' + response.overview[0].avgDeath7day.toLocaleString());
+               
             })
     });
 })(jQuery);
