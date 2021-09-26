@@ -53,7 +53,7 @@
                 $('#bang1').html(html);
                 $(document).ready(function () {
                     $('#dataTable').DataTable({
-                        "order": [[2, "desc"]]
+                        "order": [[1, "desc"]]
                     });
                 });
 
@@ -70,7 +70,7 @@
                 $('#bang2').html(html);
                 $(document).ready(function () {
                     $('#dataTable2').DataTable({
-                        "order": [[2, "desc"]]
+                        "order": [[1, "desc"]]
                     });
                 });
 
