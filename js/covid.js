@@ -32,10 +32,8 @@
                 return response.json();
             })
             .then(function (response) {
-                
                 var data = response.locations;
-                const { cases, death, recovered } = response.today.internal;
-                
+
                 var searchByName = data.filter(v => v.name === 'Bình Dương'
                     || v.name === 'TP. Hồ Chí Minh'
                     || v.name === 'Đắk Lắk'
@@ -58,6 +56,7 @@
                         "order": [[2, "desc"]]
                     });
                 });
+
                 // Xuất ra tbody Friend's Areas
                 var html = searchByName.map(function (response) {
                     const { name, cases, casesToday, death } = response;
@@ -76,6 +75,7 @@
                 });
 
                 getDateTime();
+                const { cases, death, recovered } = response.today.internal;
                 $('#canhiemhomnay').text('+ ' + cases.toLocaleString());
                 $('#tuvonghomnay').text('+ ' + death.toLocaleString());
                 $('#hoiphuchomnay').text('+ ' + recovered.toLocaleString());
@@ -91,6 +91,9 @@
                 $('#tongsocahoiphucthegioi').text(response.total.world.recovered.toLocaleString());
 
                
+            })
+            .catch(error => {
+                throw error;
             })
     });
 })(jQuery);
