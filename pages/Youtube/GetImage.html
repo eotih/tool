@@ -64,13 +64,14 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Google Tools:</h6>
-                        <a class="collapse-item" href="./Download.html">Download hình ảnh</a>
-                        <a class="collapse-item" href="./GetLink.html">Get ID hình ảnh</a>
+                        <a class="collapse-item" href="../Google/Download.html">Download hình ảnh</a>
+                        <a class="collapse-item" href="../Google/GetImage.html">Get ID hình ảnh</a>
                         <h6 class="collapse-header">Youtube Tools:</h6>
-                        <a class="collapse-item" href="../Youtube/GetImage.html">Get Image Thumbnail</a>
+                        <a class="collapse-item" href="./GetImage.html">Get Image Thumbnail</a>
                     </div>
                 </div>
             </li>
+
 
 
             <!-- Divider -->
@@ -304,39 +305,31 @@
 
                     <!-- Content Row -->
                     <div class="row">
-                        <div class="col-xl-12 col-lg-12">
+                        <div class="col-xl-6 col-lg-12">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">GET LINK DOWNLOAD GGDRIVE</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">GET LINK IMAGE YOUTUBE THUMNAIL</h6>
                                 </div>
                                 <div class="card-body">
                                     <form>
                                         <div class="mb-3">
-                                            <label for="exampleFormControlInput1">Link ggDrive
-                                                (https://drive.google.com/file/d/ID/view?usp=sharing)</label>
+                                            <label for="exampleFormControlInput1">Link Youtube
+                                                (https://www.youtube.com/watch?v=dNCWe_6HAM8)</label>
                                             <input class="form-control" id="link" type="text"
                                                 placeholder="Nhập link cần get ở đây">
                                         </div>
-                                        <button type="button" onclick="splitLink()" class="btn btn-primary btn-user btn-block">
+                                        <button type="button" onclick="splitLink()"
+                                            class="btn btn-primary btn-user btn-block">
                                             Get Now
                                         </button>
                                     </form>
                                 </div>
-                                <div class="card-body">
-                                    <form>
-                                        <div class="mb-3">
-                                            <input id="myInput" class="form-control col-xl-6" id="exampleFormControlInput1"
-                                                type="text" placeholder="Copy link ở đây">
-                                            <br>
-                                            <button type="button" onclick="copyText()"
-                                                class=" btn btn-primary btn-user btn-block col-xl-6">
-                                                Copy
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
                             </div>
                         </div>
+                        <div class="col-xl-6 col-lg-12">
+                            <img id="showImage" src="https://img.youtube.com/vi/awkkyBH2zsEo/sddefault.jpg">
+                        </div>
+
                     </div>
                 </div>
                 <!-- /.container-fluid -->
@@ -392,8 +385,8 @@
     <!-- Core plugin JavaScript-->
     <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <script src="../../js/DownloadGGDrive.js"></script>
-    
+    <script src="../../js/GetImageYoutube.js"></script>
+
     <!-- <script src="../../js/sb-admin-2.js"></script> -->
     <script src="../../js/sb-admin-2.min.js"></script>
 </body>
