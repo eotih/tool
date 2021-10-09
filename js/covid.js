@@ -38,7 +38,8 @@
                     || v.name === 'TP. Hồ Chí Minh'
                     || v.name === 'Đắk Lắk'
                     || v.name === 'Gia Lai'
-                    || v.name === 'Bình Thuận')
+                    || v.name === 'Bình Thuận'
+                    || v.name === 'Đồng Nai')
 
                 // Xuất ra tbody tình hình dịch cả nước
                 var html = data.map(function (response) {
